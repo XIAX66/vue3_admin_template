@@ -12,6 +12,7 @@ import globalComponent from '@/components';
 import '@/styles/index.scss';
 // import axios from 'axios';
 import router from './router';
+import '@/permission';
 import pinia from './store';
 
 const app = createApp(App);
