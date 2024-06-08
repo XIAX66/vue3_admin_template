@@ -21,7 +21,10 @@
     "@types/vue-router": "^2.0.0",
     "axios": "^1.6.8",
     "element-plus": "^2.7.2",
+    "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
+    "pnpm": "^9.2.0",
+    "progress": "^2.0.3",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"
   },

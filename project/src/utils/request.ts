@@ -1,6 +1,8 @@
 //axios secondary installation: Use requests and interceptors
 import axios from 'axios';
 import { ElMessage } from 'element-plus';
+// import user-realted modules
+import useUserStore from '@/store/modules/user';
 
 //first step: use axios.create() to create a new axios instance
 //(other configurations:fundamental path, timeout time)
@@ -12,6 +14,10 @@ const request = axios.create({
 //second step: use interceptors to handle requests and responses
 request.interceptors.request.use(
   (config) => {
+    let userStore = useUserStore();
+    if (userStore.token) {
+      config.headers.token = userStore.token;
+    }
     return config;
   },
   (error) => {
